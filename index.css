@@ -132,3 +132,18 @@ footer a:hover {
     color: white;
     font-size: 20px;
 }
+
+@media (max-width: 1000px){
+    .firstSelect, .secondSelect, .switchCurr {
+        font-weight: bold;
+        position: static;
+        display: block;
+        top: 65px;
+        font-size: 20px;
+        color: white;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
