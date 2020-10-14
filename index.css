@@ -11,7 +11,6 @@ body {
     position: relative;
 }
 
-
 input {
     background: #181A1B;
     color: white;
@@ -73,20 +72,21 @@ h2 {
 }
 
 .hidden {
-    display:none;
+    display: none;
 }
 
 .switchCurr {
     position: absolute;
-    right:-150px;
+    right: -150px;
     top: 570px;
 }
 
 footer {
-    background:  #181A1B;
+    background: #181A1B;
     width: 100%;
     height: 50px;
     display: grid;
+    grid-template-columns: 1fr 1fr;
     place-items: center;
     color: white;
     position: fixed;
@@ -95,14 +95,19 @@ footer {
     font-weight: bold;
 }
 
+footer span {
+    justify-self: end;
+}
+
 footer a {
     border-radius: 10px;
     background: white;
     color: black;
-    padding:5px 10px;
+    padding: 5px 10px;
     margin-left: 20px;
     text-decoration: none;
     transition: all ease 0.5s;
+    justify-self: start;
 }
 
 footer a:hover {
@@ -111,29 +116,43 @@ footer a:hover {
     color: white;
 }
 
+.divPadding {
+    height: 100px;
+}
+
 .contact-container h1 {
     color: white;
     text-align: center;
 }
 
-.contact-container > * > *{
+.contact-container>*>* {
     display: block;
     width: 100%;
-    padding: 10px;
 }
 
-.contact-container   {
+.contact-container {
     margin-top: 50px;
 }
 
-.contact-container > * > textarea {
+.contact-container>*>textarea {
     width: 100%;
     background: #181A1B;
     color: white;
     font-size: 20px;
 }
 
-@media (max-width: 1000px){
+.submitBtn {
+    margin-bottom: 20px;
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    background:#181A1B;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (max-width: 1000px) {
     .firstSelect, .secondSelect, .switchCurr {
         font-weight: bold;
         position: static;
@@ -142,8 +161,27 @@ footer a:hover {
         font-size: 20px;
         color: white;
     }
-
     .hidden {
         display: none;
+    }
+}
+
+@media (max-width: 570px) {
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        height: 70px;
+        position: static;
+    }
+    footer span {
+        justify-self: center;
+    }
+    footer a {
+        justify-self: center;
+    }
+
+    .divPadding {
+        height: 0;
     }
 }
