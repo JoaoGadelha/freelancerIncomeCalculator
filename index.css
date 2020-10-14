@@ -28,11 +28,14 @@ h2 {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 100;
     color: white;
+    text-align: center;
 }
 
 .small {
     font-size: 16px;
     margin-top: -10px;
+    text-align: center;
+
 }
 
 .btn {
@@ -183,5 +186,9 @@ footer a:hover {
 
     .divPadding {
         height: 0;
+    }
+
+    .small {
+        font-size: 13px;
     }
 }
