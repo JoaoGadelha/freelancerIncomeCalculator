@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freelancer Income Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <meta name="description"
         content="Calculate your monthly income as a freelancer by inserting your hourly rate, the number of hours worked per day and number of days worked per week. You can also include taxes.">
     <link rel="stylesheet" href="index.css">
@@ -14,7 +15,7 @@
 <body>
     <div class='wrapper'>
         <h2>Type the price you charge for one hour</h2>
-        <input class='hourValue' value=30>
+        <input class='hourValue' value=''>
         <select name="firstSelect" class='firstSelect'>
             <option value="USD">Dollar (USD)</option>
             <option value="EUR">Euro (EUR)</option>
@@ -36,13 +37,13 @@
             <option value="PKR">Pakistani Rupee (PKR)</option> -->
         </select>
         <h2>Type the number of hours worked per day</h2>
-        <input class='numberHoursPerDay' value=4>
+        <input class='numberHoursPerDay' value=''>
         <h2>Type the number of days worked per month</h2>
-        <input class='numberDaysPerMonth' value=10>
+        <input class='numberDaysPerMonth' value=''>
         <h2>Type the percentage of taxes and discounts </h2>
         <h2 class='small'>(for example, if taxes plus discounts equals 40%, type 40)</h2>
         <h2 class='small'>(if you don't want to include taxes and discounts, type 0)</h2>
-        <input class='taxes' value=40>
+        <input class='taxes' value=''>
         <button class='btn'>Calculate</button>
         <h1 class='message hidden'></h1>
         <h2 class='small switchCurr hidden'>Switch your result's currency</h2>
@@ -67,6 +68,20 @@
             <option value="PKR">Pakistani Rupee (PKR)</option> -->
         </select>
     </div>
+    <div class="contact-container">
+        <h1 >Have any sugestions ?</h1>
+        <form method='POST' data-netlify='true'>
+            <input type="text" placeholder="Name" name='name'>
+            <input type="email" placeholder="E-mail address (optional)" name='email'>
+            <textarea  cols="30" rows="10" placeholder="Enter message" name='message'></textarea>
+            <button><span>SUBMIT</span></button>
+        </form>
+    </div>
+    <footer>
+        <div>Implemented by João Ricardo T. G.
+            <a href='https://joaoricardotg.netlify.app'> Browse my past projects</a>
+        </div>
+    </footer>
 </body>
 <script type='module' src='index.js'></script>
 
