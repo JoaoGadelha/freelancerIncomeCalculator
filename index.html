@@ -5,25 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freelancer Income Calculator</title>
-    <meta name="description" content="Calculate your monthly income as a freelancer by inserting your hourly rate, the number of hours worked per day and number of days worked per week. You can also include taxes.">
-    <link rel="stylesheet" href="index.css"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Calculate your monthly income as a freelancer by inserting your hourly rate, the number of hours worked per day and number of days worked per week. You can also include taxes.">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h2>Type the price you charge for one hour</h2>
-    <input class='hourValue' value=30>
-    <h2>Type the number of hours worked per day</h2>
-    <input class='numberHoursPerDay' value=4>
-    <h2>Type the number of days worked per month</h2>
-    <input class='numberDaysPerMonth' value=10>
-    <h2>Type the percentage of taxes and discounts </h2>
-    <h2 class='small'>(for example, if taxes plus discounts equals 40%,  type 40)</h2>
-    <h2 class='small'>(if you don't want to include taxes and discounts, type 0)</h2>
-    <input class='taxes'
-        value=40>
-    <button class='btn'>Calculate</button>
-    <h1 class='message'></h1>
+    <div class='wrapper'>
+        <h2>Type the price you charge for one hour</h2>
+        <input class='hourValue' value=30>
+        <select name="firstSelect" class='firstSelect'>
+            <option value="USD">Dollar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="CAD">Canadian Dollar (CAD)</option>
+            <option value="GBP">British Pound (GBP)</option>
+            <option value="CHF">Swiss Franc (CHF)</option>
+            <option value="AUD">Australian Dollar (AUD)</option>
+            <option value="NZD">New Zealand Dollar (NZD)</option>
+            <option value="JPY">Japanese Yen (JPY)</option>
+            <option value="BRL">Brazilian Real (BRL)</option>
+            <option value="SEK">Swedish Krona (SEK)</option>
+            <option value="CNY">Chinese Yuan (CNY)</option>
+            <option value="INR">Indian Rupee (INR)</option>
+            <option value="PHP">Philippine Peso (PHP)</option>
+            <option value="RUB">Russian Ruble (RUB)</option>
+            <!-- <option value="BDT">Bangladeshi Taka (BDT)</option>
+            <option value="RSD">Serbian Dinar (RSD)</option>
+            <option value="UAH">Ukrainian Hryvnia (UAH)</option>
+            <option value="PKR">Pakistani Rupee (PKR)</option> -->
+        </select>
+        <h2>Type the number of hours worked per day</h2>
+        <input class='numberHoursPerDay' value=4>
+        <h2>Type the number of days worked per month</h2>
+        <input class='numberDaysPerMonth' value=10>
+        <h2>Type the percentage of taxes and discounts </h2>
+        <h2 class='small'>(for example, if taxes plus discounts equals 40%, type 40)</h2>
+        <h2 class='small'>(if you don't want to include taxes and discounts, type 0)</h2>
+        <input class='taxes' value=40>
+        <button class='btn'>Calculate</button>
+        <h1 class='message hidden'></h1>
+        <h2 class='small switchCurr hidden'>Switch your result's currency</h2>
+        <select name="secondSelect" class='secondSelect hidden'>
+            <option value="USD">Dollar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="CAD">Canadian Dollar (CAD)</option>
+            <option value="GBP">British Pound (GBP)</option>
+            <option value="CHF">Swiss Franc (CHF)</option>
+            <option value="AUD">Australian Dollar (AUD)</option>
+            <option value="NZD">New Zealand Dollar (NZD)</option>
+            <option value="JPY">Japanese Yen (JPY)</option>
+            <option value="BRL">Brazilian Real (BRL)</option>
+            <option value="SEK">Swedish Krona (SEK)</option>
+            <option value="CNY">Chinese Yuan (CNY)</option>
+            <option value="INR">Indian Rupee (INR)</option>
+            <option value="PHP">Philippine Peso (PHP)</option>
+            <option value="RUB">Russian Ruble (RUB)</option>
+            <!-- <option value="BDT">Bangladeshi Taka (BDT)</option>
+            <option value="RSD">Serbian Dinar (RSD)</option>
+            <option value="UAH">Ukrainian Hryvnia (UAH)</option>
+            <option value="PKR">Pakistani Rupee (PKR)</option> -->
+        </select>
+    </div>
 </body>
-<script src='index.js'></script>
+<script type='module' src='index.js'></script>
 
 </html>

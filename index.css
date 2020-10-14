@@ -4,11 +4,16 @@ body {
     place-items: center;
 }
 
-body input {
-    display:block;
+.wrapper {
+    display: grid;
+    place-items: center;
+    position: relative;
 }
 
+
 input {
+    background: #181A1B;
+    color: white;
     margin-bottom: 20px;
     width: 400px;
     height: 30px;
@@ -47,16 +52,31 @@ h2 {
     transform: scale(0.9);
 }
 
-.help {
-    background: yellow;
-    display: grid;
-    place-items: center;
-    border-radius: 5px;
-    padding: 3px;
-    border: 3px solid rgb(255, 38, 0);
-    font-weight: bold;
-}
-
 .message {
     color: white;
+}
+
+.firstSelect, .secondSelect {
+    background: rgb(255, 72, 0);
+    font-weight: bold;
+    position: absolute;
+    right: -270px;
+    top: 65px;
+    font-size: 20px;
+    color: white;
+}
+
+.secondSelect {
+    right: -180px;
+    top: 590px;
+}
+
+.hidden {
+    display:none;
+}
+
+.switchCurr {
+    position: absolute;
+    right:-150px;
+    top: 570px;
 }
